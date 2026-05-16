@@ -40,3 +40,16 @@ set_1 = {2,4,2,7,9}
 set_2 = {7,1,9,3,7,2}
 result = process_set(set_1,set_2 )
 print(result)
+
+# 3
+"""
+Define a tuple containing mixed data types, unpack its values into separate variables, and compare them with another tuple using comparison operators. Then, explain in code comments the main difference between lists and tuples in Python.
+"""
+test_touple = (1,2,"Ostad",9)
+another_touple = (1,4,"Assignment",3)
+(a,b,c,d,) = test_touple
+print(a>another_touple[0])
+print(b<another_touple[1])
+print(c==another_touple[2])
+print(d!=another_touple[3])
+# The main difference between list and touple is list is mutable and touple is immutable
