@@ -23,3 +23,20 @@ for i in range(1,6):
     number_list.append(int(input("Take a number: ")))
 final_result = list_processing(number_list)
 print(final_result)
+# 2
+"""
+Create a function that accepts two sets as parameters and returns their union, intersection, and difference. Use keyword arguments with default parameter values so the function can work even if one of the sets is not provided by the user. Display the results clearly.
+"""
+def process_set(first_set={2,4,2,7,9},second_set={7,1,9,3,7,2}):
+    union_set = first_set.union(second_set)
+    intersection_set = first_set.intersection(second_set)
+    difference_set = first_set.difference(second_set)
+    return {
+        "Union": union_set,
+        "Intersection": intersection_set,
+        "Difference": difference_set
+    }
+set_1 = {2,4,2,7,9}
+set_2 = {7,1,9,3,7,2}
+result = process_set(set_1,set_2 )
+print(result)
