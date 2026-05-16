@@ -41,7 +41,6 @@ set_2 = {7,1,9,3,7,2}
 result = process_set(set_1)
 for i,j in result.items():
     print(f"{i}={j}")
-# print(result)
 
 # 3
 """
@@ -49,9 +48,7 @@ Define a tuple containing mixed data types, unpack its values into separate vari
 """
 test_touple = (1,2,"Ostad",9)
 another_touple = (1,4,"Assignment",3)
-(a,b,c,d,) = test_touple
-print(a>another_touple[0])
-print(b<another_touple[1])
-print(c==another_touple[2])
-print(d!=another_touple[3])
+(x,*y) = test_touple
+for i in range(len(test_touple)):
+    print(test_touple[i]==another_touple[i])
 # The main difference between list and touple is list is mutable and touple is immutable
