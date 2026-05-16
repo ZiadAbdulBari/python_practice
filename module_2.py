@@ -38,8 +38,10 @@ def process_set(first_set={2,4,2,7,9},second_set={7,1,9,3,7,2}):
     }
 set_1 = {2,4,2,7,9}
 set_2 = {7,1,9,3,7,2}
-result = process_set(set_1,set_2 )
-print(result)
+result = process_set(set_1)
+for i,j in result.items():
+    print(f"{i}={j}")
+# print(result)
 
 # 3
 """
