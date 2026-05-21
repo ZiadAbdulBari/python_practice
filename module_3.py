@@ -42,6 +42,25 @@ calculator.add(2,3)
 advance=AdvancedCalculator()
 advance.add(10,20,30,40)
 
+# PROBLEM-3
 """
 Create a class BankAccount with a private attribute balance and provide methods deposit() and withdraw() to modify the balance safely so that the balance cannot be accessed directly. Then create two subclasses SavingsAccount and CurrentAccount, each having a method account_type() that prints its respective account type. Demonstrate polymorphism by calling account_type() from different account objects.
 """
+class BankAccount:
+    def __init__(self):
+        self.__balance=500
+    def deposit(self):
+        self.__balance=self.__balance+400
+    def withdraw(self):
+        self.__balance=self.__balance-200
+class SavingsAccount(BankAccount):
+    def account_type(self):
+        print("Saving account")
+class CurrentAccount(BankAccount):
+    def account_type(self):
+        print("Current account")
+
+def show_account_type(account):
+    account.account_type()
+show_account_type(SavingsAccount())
+show_account_type(CurrentAccount())
